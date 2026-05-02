@@ -39,7 +39,3 @@ Thumbs.db
 # Uploads
 /uploads/
 /temp/
-
-# Logs
-logs/
-*.log

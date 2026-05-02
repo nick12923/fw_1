@@ -67,7 +67,6 @@ fundwisor/
 │   ├── migrations/         # Database migrations
 │   ├── package.json
 │   └── tsconfig.json
-│
 ├── frontend/               # Next.js React frontend
 │   ├── src/
 │   │   ├── components/    # Reusable components
@@ -80,7 +79,6 @@ fundwisor/
 │   ├── public/            # Static assets
 │   ├── package.json
 │   └── next.config.js
-│
 └── docs/                   # Documentation
     ├── DATABASE_SCHEMA.md
     ├── API_DOCUMENTATION.md
@@ -99,14 +97,8 @@ fundwisor/
 ```bash
 cd backend
 npm install
-
-# Create .env file
 cp .env.example .env
-
-# Run migrations
 npm run migrate
-
-# Start development server
 npm run dev
 ```
 
@@ -115,13 +107,11 @@ npm run dev
 ```bash
 cd frontend
 npm install
-
-# Create .env.local file
 cp .env.example .env.local
-
-# Start development server
 npm run dev
 ```
+
+Access the application at `http://localhost:3000`
 
 ## 🔐 Security Features
 
@@ -134,80 +124,26 @@ npm run dev
 7. **Access Expiration** - Time-limited document access
 8. **Encrypted Passwords** - bcrypt hashing
 
-## 📊 Database Schema
+## 📚 Documentation
 
-See [DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md) for complete schema details.
+- [Database Schema](docs/DATABASE_SCHEMA.md) - Complete PostgreSQL schema
+- [API Documentation](docs/API_DOCUMENTATION.md) - All REST API endpoints
+- [Workflow Guide](docs/WORKFLOW_GUIDE.md) - Detailed workflows
 
-## 📚 API Documentation
+## 🔧 Environment Variables
 
-See [API_DOCUMENTATION.md](docs/API_DOCUMENTATION.md) for all API endpoints.
-
-## 🔄 Workflow Guide
-
-See [WORKFLOW_GUIDE.md](docs/WORKFLOW_GUIDE.md) for detailed workflow explanations.
-
-## 📝 Environment Variables
-
-### Backend (.env)
-```
-NODE_ENV=development
-PORT=5000
-
-# Database
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=fundwisor
-DB_USER=postgres
-DB_PASSWORD=password
-
-# JWT
-JWT_SECRET=your_jwt_secret_key
-JWT_EXPIRY=24h
-
-# AWS S3 (Mock)
-S3_BUCKET=fundwisor-documents
-AWS_REGION=us-east-1
-
-# Payment Gateway
-RAZORPAY_KEY=your_razorpay_key
-RAZORPAY_SECRET=your_razorpay_secret
-
-# Email
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your_email
-SMTP_PASS=your_password
-```
-
-### Frontend (.env.local)
-```
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
-NEXT_PUBLIC_APP_NAME=FundWisor
-```
+See `.env.example` files in backend and frontend directories.
 
 ## 🧪 Testing
 
 ```bash
 # Backend tests
-cd backend
-npm run test
+cd backend && npm run test
 
 # Frontend tests
-cd frontend
-npm run test
+cd frontend && npm run test
 ```
-
-## 🤝 Contributing
-
-1. Create a feature branch: `git checkout -b feature/amazing-feature`
-2. Commit changes: `git commit -m 'Add amazing feature'`
-3. Push to branch: `git push origin feature/amazing-feature`
-4. Open a pull request
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
-
-## 💬 Support
-
-For issues, questions, or suggestions, please open an issue on GitHub.
+MIT License
